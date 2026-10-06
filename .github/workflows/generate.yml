@@ -46,6 +46,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes."
           else
-            git commit -m "chore: regenerate Hijri calendar and prayer data"
+            git commit -m "chore: regenerate Hijri calendar and prayer data" \
+              -m "Co-authored-by: CommandCodeBot <noreply@commandcode.ai>"
             git push
           fi

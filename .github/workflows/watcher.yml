@@ -47,5 +47,8 @@ jobs:
           title: "Watcher: confirm the next Hijri month start"
           body-path: watcher-out/pull-request.md
           add-paths: data/hijri/overrides.json
-          commit-message: "data: propose confirmed Hijri month start"
+          commit-message: |
+            data: propose confirmed Hijri month start
+
+            Co-authored-by: CommandCodeBot <noreply@commandcode.ai>
           delete-branch: true
