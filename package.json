@@ -1,0 +1,59 @@
+{
+  "name": "hijri-api",
+  "version": "0.1.0",
+  "description": "Open Hijri calendar and prayer times data for Pakistan, with confidence levels and a static JSON API.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./hijri": {
+      "types": "./dist/hijri/index.d.ts",
+      "import": "./dist/hijri/index.js"
+    },
+    "./prayer": {
+      "types": "./dist/prayer/index.d.ts",
+      "import": "./dist/prayer/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "hijri": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "generate": "tsx src/cli.ts generate",
+    "generate:calendar": "tsx src/cli.ts generate --calendar",
+    "generate:prayer": "tsx src/cli.ts generate --prayer",
+    "watcher": "tsx src/cli.ts watch",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "adhan": "^4.4.6",
+    "chrono-node": "^2.8.0",
+    "luxon": "^3.5.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
