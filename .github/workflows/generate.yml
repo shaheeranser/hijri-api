@@ -1,0 +1,51 @@
+name: generate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "data/cities.json"
+      - "data/hijri/overrides.json"
+      - "package.json"
+      - "package-lock.json"
+  workflow_dispatch:
+  # Monthly heartbeat keeps scheduled workflows enabled (GitHub disables them
+  # after 60 days of repository inactivity) and refreshes rolling data.
+  schedule:
+    - cron: "0 3 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --include=dev
+
+      - name: Regenerate calendar and prayer data
+        run: npx tsx src/cli.ts generate
+
+      - name: Commit changes
+        run: |
+          git config user.name "hijri-bot"
+          git config user.email "hijri-bot@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore: regenerate Hijri calendar and prayer data"
+            git push
+          fi

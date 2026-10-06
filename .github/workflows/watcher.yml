@@ -1,0 +1,51 @@
+name: watcher
+
+on:
+  # Poll frequently around the 29th evening. Pakistan is UTC+5, so 13:00-20:00
+  # UTC spans the evening meeting through roughly 1 AM Karachi. The script
+  # date-gates precisely, so most runs exit immediately.
+  schedule:
+    - cron: "*/15 13-20 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Detect only; do not write overrides or open a PR"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --include=dev
+
+      - name: Run the announcement watcher
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "false" ]; then
+            npx tsx src/cli.ts watch --write
+          else
+            npx tsx src/cli.ts watch
+          fi
+
+      - name: Open a pull request for human approval
+        if: ${{ hashFiles('watcher-out/pull-request.md') != '' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: watcher/hijri-month-start
+          title: "Watcher: confirm the next Hijri month start"
+          body-path: watcher-out/pull-request.md
+          add-paths: data/hijri/overrides.json
+          commit-message: "data: propose confirmed Hijri month start"
+          delete-branch: true
