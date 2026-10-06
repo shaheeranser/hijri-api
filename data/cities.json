@@ -1,0 +1,29 @@
+[
+  {
+    "id": "karachi",
+    "name": "Karachi",
+    "province": "Sindh",
+    "latitude": 24.8607,
+    "longitude": 67.0011,
+    "elevation": 8,
+    "timezone": "Asia/Karachi"
+  },
+  {
+    "id": "lahore",
+    "name": "Lahore",
+    "province": "Punjab",
+    "latitude": 31.5204,
+    "longitude": 74.3587,
+    "elevation": 217,
+    "timezone": "Asia/Karachi"
+  },
+  {
+    "id": "peshawar",
+    "name": "Peshawar",
+    "province": "Khyber Pakhtunkhwa",
+    "latitude": 34.0151,
+    "longitude": 71.5249,
+    "elevation": 331,
+    "timezone": "Asia/Karachi"
+  }
+]
