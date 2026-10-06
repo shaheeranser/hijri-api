@@ -9,7 +9,9 @@ most valuable.
 2. Add an entry keyed by the Hijri 1st (`YYYY-MM-DD`), with the Gregorian date it
    began and at least one public source URL.
 3. Run `npm run generate` to rebuild the calendar files.
-4. Include the source links in your pull request.
+4. Open the pull request with the
+   [backfill month](.github/PULL_REQUEST_TEMPLATE/backfill-month.md) template, which
+   asks for the date and the sources.
 
 ```jsonc
 {
@@ -28,6 +30,9 @@ Rules the generator enforces (`src/hijri/overrides.ts`):
 - Every entry needs at least one `http(s)` source URL.
 - Dates must be real `YYYY-MM-DD` calendar dates.
 - Two months cannot start on the same day.
+
+Leave `coverage_start` as `null`; the generator derives it from the earliest
+confirmed month.
 
 Store **confirmed start dates, not offsets**. An offset applied to a calculated
 calendar cascades, because one wrong correction shifts every later month; start dates
