@@ -1,7 +1,7 @@
 {
   "hijri_year": 1448,
-  "coverage_start": null,
-  "generated_at": "2026-10-06T11:37:23.966Z",
+  "coverage_start": "2026-09-14",
+  "generated_at": "2026-10-06T12:22:13.925Z",
   "baseline": "islamic-umalqura (Intl)",
   "days": {
     "2026-06-16": {
@@ -995,6 +995,36 @@
       "confidence": "estimated"
     },
     "2026-09-14": {
+      "hijri": "1448-04-01",
+      "year": 1448,
+      "month": 4,
+      "day": 1,
+      "month_name": {
+        "en": "Rabi al-Thani",
+        "ur": "ربیع الثانی"
+      },
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
+    },
+    "2026-09-15": {
+      "hijri": "1448-04-02",
+      "year": 1448,
+      "month": 4,
+      "day": 2,
+      "month_name": {
+        "en": "Rabi al-Thani",
+        "ur": "ربیع الثانی"
+      },
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
+    },
+    "2026-09-16": {
       "hijri": "1448-04-03",
       "year": 1448,
       "month": 4,
@@ -1003,9 +1033,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-15": {
+    "2026-09-17": {
       "hijri": "1448-04-04",
       "year": 1448,
       "month": 4,
@@ -1014,9 +1048,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-16": {
+    "2026-09-18": {
       "hijri": "1448-04-05",
       "year": 1448,
       "month": 4,
@@ -1025,9 +1063,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-17": {
+    "2026-09-19": {
       "hijri": "1448-04-06",
       "year": 1448,
       "month": 4,
@@ -1036,9 +1078,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-18": {
+    "2026-09-20": {
       "hijri": "1448-04-07",
       "year": 1448,
       "month": 4,
@@ -1047,9 +1093,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-19": {
+    "2026-09-21": {
       "hijri": "1448-04-08",
       "year": 1448,
       "month": 4,
@@ -1058,9 +1108,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-20": {
+    "2026-09-22": {
       "hijri": "1448-04-09",
       "year": 1448,
       "month": 4,
@@ -1069,9 +1123,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-21": {
+    "2026-09-23": {
       "hijri": "1448-04-10",
       "year": 1448,
       "month": 4,
@@ -1080,9 +1138,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-22": {
+    "2026-09-24": {
       "hijri": "1448-04-11",
       "year": 1448,
       "month": 4,
@@ -1091,9 +1153,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-23": {
+    "2026-09-25": {
       "hijri": "1448-04-12",
       "year": 1448,
       "month": 4,
@@ -1102,9 +1168,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-24": {
+    "2026-09-26": {
       "hijri": "1448-04-13",
       "year": 1448,
       "month": 4,
@@ -1113,9 +1183,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-25": {
+    "2026-09-27": {
       "hijri": "1448-04-14",
       "year": 1448,
       "month": 4,
@@ -1124,9 +1198,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-26": {
+    "2026-09-28": {
       "hijri": "1448-04-15",
       "year": 1448,
       "month": 4,
@@ -1135,9 +1213,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-27": {
+    "2026-09-29": {
       "hijri": "1448-04-16",
       "year": 1448,
       "month": 4,
@@ -1146,9 +1228,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-28": {
+    "2026-09-30": {
       "hijri": "1448-04-17",
       "year": 1448,
       "month": 4,
@@ -1157,9 +1243,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-29": {
+    "2026-10-01": {
       "hijri": "1448-04-18",
       "year": 1448,
       "month": 4,
@@ -1168,9 +1258,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-09-30": {
+    "2026-10-02": {
       "hijri": "1448-04-19",
       "year": 1448,
       "month": 4,
@@ -1179,9 +1273,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-01": {
+    "2026-10-03": {
       "hijri": "1448-04-20",
       "year": 1448,
       "month": 4,
@@ -1190,9 +1288,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-02": {
+    "2026-10-04": {
       "hijri": "1448-04-21",
       "year": 1448,
       "month": 4,
@@ -1201,9 +1303,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-03": {
+    "2026-10-05": {
       "hijri": "1448-04-22",
       "year": 1448,
       "month": 4,
@@ -1212,9 +1318,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-04": {
+    "2026-10-06": {
       "hijri": "1448-04-23",
       "year": 1448,
       "month": 4,
@@ -1223,9 +1333,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-05": {
+    "2026-10-07": {
       "hijri": "1448-04-24",
       "year": 1448,
       "month": 4,
@@ -1234,9 +1348,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "estimated"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-06": {
+    "2026-10-08": {
       "hijri": "1448-04-25",
       "year": 1448,
       "month": 4,
@@ -1245,9 +1363,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-07": {
+    "2026-10-09": {
       "hijri": "1448-04-26",
       "year": 1448,
       "month": 4,
@@ -1256,9 +1378,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-08": {
+    "2026-10-10": {
       "hijri": "1448-04-27",
       "year": 1448,
       "month": 4,
@@ -1267,9 +1393,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-09": {
+    "2026-10-11": {
       "hijri": "1448-04-28",
       "year": 1448,
       "month": 4,
@@ -1278,9 +1408,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-10": {
+    "2026-10-12": {
       "hijri": "1448-04-29",
       "year": 1448,
       "month": 4,
@@ -1289,9 +1423,13 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
-    "2026-10-11": {
+    "2026-10-13": {
       "hijri": "1448-04-30",
       "year": 1448,
       "month": 4,
@@ -1300,29 +1438,11 @@
         "en": "Rabi al-Thani",
         "ur": "ربیع الثانی"
       },
-      "confidence": "unconfirmed"
-    },
-    "2026-10-12": {
-      "hijri": "1448-05-01",
-      "year": 1448,
-      "month": 5,
-      "day": 1,
-      "month_name": {
-        "en": "Jumada al-Awwal",
-        "ur": "جمادی الاول"
-      },
-      "confidence": "predicted"
-    },
-    "2026-10-13": {
-      "hijri": "1448-05-02",
-      "year": 1448,
-      "month": 5,
-      "day": 2,
-      "month_name": {
-        "en": "Jumada al-Awwal",
-        "ur": "جمادی الاول"
-      },
-      "confidence": "predicted"
+      "confidence": "unconfirmed",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
     },
     "2026-10-14": {
       "hijri": "1448-05-03",

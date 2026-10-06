@@ -1,5 +1,13 @@
 {
   "$schema": "./overrides.schema.json",
   "coverage_start": null,
-  "months": {}
+  "months": {
+    "1448-04-01": {
+      "date": "2026-09-14",
+      "sources": [
+        "https://www.nation.com.pk/13-Sep-2026/moon-sighted-rabi-ul-sani-begin-tomorrow",
+        "https://www.samaa.tv/2087356706-rabi-us-sani-moon-not-sighted-in-pakistan"
+      ]
+    }
+  }
 }
