@@ -1,0 +1,5 @@
+{
+  "$schema": "./overrides.schema.json",
+  "coverage_start": null,
+  "months": {}
+}
