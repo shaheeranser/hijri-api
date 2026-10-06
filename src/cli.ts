@@ -160,7 +160,7 @@ function reportWatch(args: Args, outcome: WatcherOutcome): number {
   if (outcome.status === "no-announcement" || outcome.status === "fetch-failed") {
     console.log(JSON.stringify(outcome, null, 2));
   }
-  return outcome.status === "fetch-failed" || outcome.status === "no-baseline" ? 1 : 0;
+  return outcome.status === "fetch-failed" ? 1 : 0;
 }
 
 async function main(): Promise<void> {
