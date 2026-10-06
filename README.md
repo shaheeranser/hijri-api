@@ -20,7 +20,8 @@ and the recurring cost is zero.
 ## Endpoints
 
 GitHub Pages serves the JSON in `data/` as the site root with open CORS, so browser
-apps can fetch it directly. Replace `<owner>` with the hosting account.
+apps can fetch it directly. The base URL is `https://shaheeranser.github.io/hijri-api`;
+endpoints below are relative to it.
 
 | Path | Contents |
 |---|---|
@@ -84,7 +85,7 @@ read it directly.
 ```ts
 import { HijriCalendar, PrayerTable, hijriDate, sehriIftar } from "hijri-api";
 
-const base = "https://<owner>.github.io/hijri-api";
+const base = "https://shaheeranser.github.io/hijri-api";
 const calendar = HijriCalendar.fromJSON(await (await fetch(`${base}/hijri/calendar/1448.json`)).json());
 const prayer = PrayerTable.fromJSON(await (await fetch(`${base}/prayer/karachi/sunni_hanafi/2026.json`)).json());
 
