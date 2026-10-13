@@ -54,9 +54,67 @@ export function buildProposal(options: BuildProposalOptions): Proposal {
   };
 }
 
+/**
+ * Google News exposes an outlet's display label in `<source>` but not its
+ * domain, while direct feeds expose the hostname. Both forms map to one
+ * canonical key so the same outlet cannot count as two independent sources.
+ */
+const PUBLISHER_ALIASES: Record<string, string> = {
+  "associated press of pakistan": "app.com.pk",
+  "app": "app.com.pk",
+  "business recorder": "brecorder.com",
+  "brecorder": "brecorder.com",
+  "the news": "thenews.com.pk",
+  "the news pakistan": "thenews.com.pk",
+  "24 news hd": "24newshd.tv",
+  "24newshd": "24newshd.tv",
+  "dunya news": "dunyanews.tv",
+  "geo news": "geo.tv",
+  "geo": "geo.tv",
+  "ary news": "arynews.tv",
+  "samaa": "samaa.tv",
+  "samaa tv": "samaa.tv",
+  "the nation": "nation.com.pk",
+  "the express tribune": "tribune.com.pk",
+  "express tribune": "tribune.com.pk",
+  "dawn": "dawn.com",
+  "dawn news": "dawn.com",
+  "bol news": "bolnews.com",
+  "daily pakistan": "dailypakistan.com.pk",
+  "pakistan observer": "pakobserver.net",
+  "minute mirror": "minutemirror.com.pk",
+  "pakistan today": "pakistantoday.com.pk",
+  "pakistan connect": "thepakistanconnect.com",
+  "khyber news": "khybernews.tv",
+};
+
+const MULTI_LABEL_SUFFIXES = new Set(["com.pk", "org.pk", "net.pk", "gov.pk", "edu.pk", "co.uk", "com.au", "co.in"]);
+
+function registrableDomain(host: string): string {
+  const parts = host.toLowerCase().replace(/^www\./, "").split(".");
+  if (parts.length <= 2) return parts.join(".");
+  const lastTwo = parts.slice(-2).join(".");
+  return MULTI_LABEL_SUFFIXES.has(lastTwo) ? parts.slice(-3).join(".") : lastTwo;
+}
+
+function publisherLabel(publisher: string): string {
+  return publisher.replace(/^\s*\|\s*/, "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+/** Stable identity for a publisher, independent of whether it came via Google News or a direct feed. */
+export function canonicalPublisher(publisher: string): string {
+  const label = publisherLabel(publisher);
+  const alias = PUBLISHER_ALIASES[label];
+  if (alias !== undefined) return alias;
+  if (label !== "" && !label.includes(" ") && /^[a-z0-9.-]+\.[a-z]{2,}$/.test(label)) {
+    return registrableDomain(label);
+  }
+  return label;
+}
+
 /** Number of distinct publishers behind a set of agreements. */
 export function countPublishers(agreements: { article: Article }[]): number {
-  return new Set(agreements.map((a) => a.article.publisher)).size;
+  return new Set(agreements.map((a) => canonicalPublisher(a.article.publisher))).size;
 }
 
 export function applyProposal(raw: OverridesFile, proposal: Proposal): OverridesFile {

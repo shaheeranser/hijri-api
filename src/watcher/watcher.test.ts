@@ -6,12 +6,14 @@ import type { FetchLike, SourceConfig } from "./sources.js";
 const sources: SourceConfig[] = [{ name: "Test Feed", url: "https://feed.test/rss" }];
 const maghribFor = (): Date => new Date("2025-03-29T18:30:00+05:00");
 
-function rss(items: { title: string; link: string; publisher: string }[]): string {
+function rss(items: { title: string; link: string; publisher: string; pubDate?: string }[]): string {
   const entries = items
     .map(
       (item) =>
         `<item><title>${item.title}</title><link>${item.link}</link>` +
-        `<source url="${item.link}">${item.publisher}</source><description>${item.title}</description></item>`,
+        `<source url="${item.link}">${item.publisher}</source>` +
+        `${item.pubDate === undefined ? "" : `<pubDate>${item.pubDate}</pubDate>`}` +
+        `<description>${item.title}</description></item>`,
     )
     .join("");
   return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Test</title>${entries}</channel></rss>`;
@@ -45,12 +47,50 @@ describe("runWatcher", () => {
     expect(outcome.status).toBe("not-due");
   });
 
+  it("reports overdue once the window closes without a confirmation", async () => {
+    const outcome = await runWatcher(options(baseline, fetchReturning(""), new Date("2025-04-01T12:00:00+05:00")));
+    expect(outcome).toMatchObject({ status: "overdue", latest: "2025-03-31" });
+    if (outcome.status === "overdue") {
+      expect(outcome.expected).toEqual({ year: 1446, month: 10, day: 1 });
+    }
+  });
+
   it("proposes when two independent publishers agree", async () => {
     const outcome = await runWatcher(options(baseline, fetchReturning(rss(bothAnnounceMarch30))));
     expect(outcome).toMatchObject({ status: "proposed" });
     if (outcome.status === "proposed") {
       expect(outcome.proposal.gregorian).toBe("2025-03-30");
       expect(outcome.proposal.hijriKey).toBe("1446-10-01");
+    }
+  });
+
+  it("proposes when publishers name the month but never say committee", async () => {
+    const app = { title: "Shawwal moon sighted in Pakistan, first day to fall on March 31", link: "https://app.com.pk/a", publisher: "| Associated Press Of Pakistan" };
+    const hd = { title: "Shawwal moon sighted, first day to fall on Monday", link: "https://24newshd.tv/b", publisher: "24 News HD" };
+    const outcome = await runWatcher(options(baseline, fetchReturning(rss([app, hd]))));
+    expect(outcome).toMatchObject({ status: "proposed" });
+    if (outcome.status === "proposed") expect(outcome.proposal.gregorian).toBe("2025-03-31");
+  });
+
+  it("reports near misses when an announcement has no readable date", async () => {
+    const vague = { title: "Ruet-e-Hilal Committee to announce Shawwal moon tonight", link: "https://dawn.com/x", publisher: "Dawn" };
+    const outcome = await runWatcher(options(baseline, fetchReturning(rss([vague]))));
+    expect(outcome.status).toBe("no-announcement");
+    if (outcome.status === "no-announcement") {
+      expect(outcome.sightings).toEqual([]);
+      expect(outcome.nearMisses).toHaveLength(1);
+      expect(outcome.nearMisses[0]?.title).toContain("Shawwal");
+    }
+  });
+
+  it("ignores a stale announcement from outside the polling window", async () => {
+    const stale = { title: "Ruet-e-Hilal announces Ramadan will begin on March 30", link: "https://dawn.com/old", publisher: "Dawn", pubDate: "2024-03-29T20:00:00+05:00" };
+    const fresh = { title: "Ruet-e-Hilal: Ramadan begins March 30", link: "https://geo.tv/new", publisher: "Geo", pubDate: "2025-03-29T20:00:00+05:00" };
+    const outcome = await runWatcher(options(baseline, fetchReturning(rss([stale, fresh]))));
+    expect(outcome.status).toBe("no-announcement");
+    if (outcome.status === "no-announcement") {
+      expect(outcome.sightings.map((s) => s.publisher)).toEqual(["Geo"]);
+      expect(outcome.articlesInWindow).toBe(1);
     }
   });
 

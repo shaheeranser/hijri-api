@@ -11,7 +11,6 @@ import { buildPrayerFiles, computeDay, getProfile, loadCities } from "./prayer/i
 import { PROFILE_IDS } from "./prayer/profiles.js";
 import type { City, OverridesFile, PrayerProfile } from "./types.js";
 import {
-  DEFAULT_SOURCES,
   applyProposal,
   renderPullRequestBody,
   runWatcher,
@@ -132,8 +131,9 @@ async function runWatch(args: Args): Promise<number> {
     overrides,
     now: now === undefined ? undefined : new Date(now),
     maghribFor: karachiMaghrib(city, getProfile("sunni_hanafi")),
-    sources: DEFAULT_SOURCES,
   });
+  const jsonOut = stringFlag(args.flags, "json-out");
+  if (jsonOut !== undefined) writeJson(jsonOut, outcome);
   return reportWatch(args, outcome);
 }
 
@@ -151,13 +151,34 @@ function reportWatch(args: Args, outcome: WatcherOutcome): number {
     } else {
       console.log("watch: dry run; pass --write to update overrides.json");
     }
+    if (args.flags.get("dump") === true) {
+      console.log(JSON.stringify(outcome, null, 2));
+    }
     return 0;
   }
 
   console.log(`watch: ${outcome.status}${
     outcome.status === "not-due" || outcome.status === "no-baseline" ? ` (${outcome.reason})` : ""
   }`);
-  if (outcome.status === "no-announcement" || outcome.status === "fetch-failed") {
+  if (outcome.status === "overdue") {
+    console.log(
+      `  expected 1 of ${outcome.expected.year}-${String(outcome.expected.month).padStart(2, "0")} ` +
+        `but no confirmation; latest start was ${outcome.latest}`,
+    );
+  }
+  if (outcome.status === "no-announcement") {
+    console.log(
+      `  ${outcome.articlesChecked} article(s), ${outcome.articlesInWindow} in window; ` +
+        `${outcome.sightings.length} date sighting(s); ${outcome.nearMisses.length} near miss(es)`,
+    );
+    for (const sighting of outcome.sightings) {
+      console.log(`  sighting: ${sighting.date} <- ${sighting.publisher} (${sighting.strength}) ${sighting.title}`);
+    }
+    for (const miss of outcome.nearMisses) {
+      console.log(`  near miss: ${miss.publisher} — ${miss.title}`);
+    }
+  }
+  if (args.flags.get("dump") === true || outcome.status === "fetch-failed") {
     console.log(JSON.stringify(outcome, null, 2));
   }
   return outcome.status === "fetch-failed" ? 1 : 0;

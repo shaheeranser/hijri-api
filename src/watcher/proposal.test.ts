@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
 import type { Article } from "./sources.js";
 import type { Extraction } from "./extract.js";
-import { applyProposal, buildProposal, countPublishers, renderPullRequestBody } from "./proposal.js";
+import {
+  applyProposal,
+  buildProposal,
+  canonicalPublisher,
+  countPublishers,
+  renderPullRequestBody,
+} from "./proposal.js";
 
 const candidates = [
   { date: "2025-03-30", weekday: "Sunday", weekdayUr: "اتوار" },
@@ -29,6 +35,26 @@ describe("buildProposal", () => {
     expect(proposal.hijriKey).toBe("1446-10-01");
     expect(proposal.sources).toEqual(["https://dawn.com/a", "https://geo.tv/b"]);
     expect(countPublishers(agreements)).toBe(2);
+  });
+});
+
+describe("canonicalPublisher", () => {
+  it("maps a Google News label and a direct hostname to one identity", () => {
+    expect(canonicalPublisher("| Associated Press Of Pakistan")).toBe("app.com.pk");
+    expect(canonicalPublisher("www.app.com.pk")).toBe("app.com.pk");
+    expect(canonicalPublisher("24 News HD")).toBe("24newshd.tv");
+  });
+
+  it("keeps unknown outlets distinct by normalised label", () => {
+    expect(canonicalPublisher("Some Local Paper")).toBe("some local paper");
+  });
+
+  it("does not count the same outlet twice", () => {
+    const sameOutlet = [
+      agreement("| Associated Press Of Pakistan", "https://news.google.com/rss/articles/a"),
+      agreement("www.app.com.pk", "https://www.app.com.pk/national/x"),
+    ];
+    expect(countPublishers(sameOutlet)).toBe(1);
   });
 });
 
