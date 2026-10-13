@@ -3,6 +3,7 @@
  * boundary: the fetcher is injected so tests run offline.
  */
 import Parser from "rss-parser";
+import { monthNameVariants } from "../hijri/months.js";
 
 export type FetchLike = (input: string, init?: RequestInit) => Promise<Response>;
 
@@ -35,8 +36,13 @@ export interface FetchArticlesResult {
  * Google News RSS search feeds for the committee. Google News aggregates Dawn,
  * Geo, ARY, Express and others, and carries the publisher in `<source>`, which
  * is what we use for the two-source independence check.
+ *
+ * These generic queries are ranked by relevance, not recency, so for a month
+ * with little press they can be dominated by older announcements and miss the
+ * current one entirely. They stay as a broad fallback; `buildMonthSources`
+ * adds queries tuned to the month being watched.
  */
-export const DEFAULT_SOURCES: SourceConfig[] = [
+export const COMMITTEE_SOURCES: SourceConfig[] = [
   {
     name: "Google News (English, Ruet-e-Hilal)",
     url: "https://news.google.com/rss/search?q=Ruet-e-Hilal+committee+Pakistan&hl=en-PK&gl=PK&ceid=PK:en",
@@ -50,6 +56,77 @@ export const DEFAULT_SOURCES: SourceConfig[] = [
     url: "https://news.google.com/rss/search?q=%D8%B1%D9%88%DB%8C%D8%AA+%DB%81%D9%84%D8%A7%D9%84+%D9%BE%D8%A7%DA%A9%D8%B3%D8%AA%D8%A7%D9%86&hl=ur-PK&gl=PK&ceid=PK:ur",
   },
 ];
+
+/**
+ * Direct RSS from Pakistan outlets, independent of Google News rankings. APP is
+ * the state wire and carries the official notification; the others add
+ * independent confirmation.
+ */
+export const DIRECT_SOURCES: SourceConfig[] = [
+  { name: "APP (direct)", url: "https://www.app.com.pk/feed/" },
+  { name: "Business Recorder (direct)", url: "https://www.brecorder.com/feeds/latest-news" },
+  { name: "The News (direct)", url: "https://www.thenews.com.pk/rss/1/2" },
+];
+
+const RECENCY = "when:3d";
+
+function googleNewsQuery(query: string, hl: string, ceid: string): string {
+  const params = new URLSearchParams({ q: query, hl, gl: "PK", ceid });
+  return `https://news.google.com/rss/search?${params.toString()}`;
+}
+
+function normalized(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9\u0600-\u06ff]/g, "");
+}
+
+/** Distinct ASCII romanisations of a month, capped to keep the request count sane. */
+function queryVariants(month: number, limit = 3): string[] {
+  const seen = new Set<string>();
+  const chosen: string[] = [];
+  for (const variant of monthNameVariants(month)) {
+    if (!/[a-z]/i.test(variant)) continue;
+    const key = normalized(variant);
+    if (key === "" || seen.has(key)) continue;
+    seen.add(key);
+    chosen.push(variant);
+    if (chosen.length >= limit) break;
+  }
+  return chosen;
+}
+
+/**
+ * Search feeds tuned to the month being watched, across spellings, with a
+ * recency filter so stale announcements cannot crowd out the current one.
+ */
+export function buildMonthSources(month: number): SourceConfig[] {
+  const sources: SourceConfig[] = queryVariants(month).map((variant) => ({
+    name: `Google News (EN, ${variant})`,
+    url: googleNewsQuery(`${variant} moon Pakistan ${RECENCY}`, "en-PK", "PK:en"),
+  }));
+  const urdu = monthNameVariants(month).find((variant) => /[\u0600-\u06ff]/.test(variant));
+  if (urdu !== undefined) {
+    sources.push({
+      name: `Google News (UR, ${urdu})`,
+      url: googleNewsQuery(`${urdu} چاند Pakistan ${RECENCY}`, "ur-PK", "PK:ur"),
+    });
+  }
+  return sources;
+}
+
+/**
+ * The full source set: month-aware searches first, then the broad committee and
+ * direct feeds as fallbacks. Pass the Hijri month being watched.
+ */
+export function buildSources(month?: number): SourceConfig[] {
+  return [
+    ...(month === undefined ? [] : buildMonthSources(month)),
+    ...COMMITTEE_SOURCES,
+    ...DIRECT_SOURCES,
+  ];
+}
+
+/** Broad fallback set, used when the target month is unknown. */
+export const DEFAULT_SOURCES: SourceConfig[] = buildSources();
 
 interface RawItem {
   title?: unknown;
