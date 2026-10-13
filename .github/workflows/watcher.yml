@@ -4,6 +4,10 @@ on:
   # Poll frequently around the 29th evening. Pakistan is UTC+5, so 13:00-20:00
   # UTC spans the evening meeting through roughly 1 AM Karachi. The script
   # date-gates precisely, so most runs exit immediately.
+  #
+  # GitHub delays and drops scheduled runs under load, so this cron is a
+  # fallback only; see CONTRIBUTING.md for the external dispatcher that keeps
+  # the 29th evening covered.
   schedule:
     - cron: "*/15 13-20 * * *"
   workflow_dispatch:
@@ -16,6 +20,11 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
+
+concurrency:
+  group: watcher
+  cancel-in-progress: false
 
 jobs:
   watch:
@@ -31,12 +40,32 @@ jobs:
       - run: npm ci --include=dev
 
       - name: Run the announcement watcher
+        # Scheduled runs must be allowed to write: the update only ever reaches
+        # a pull request for human review, never main.
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "false" ]; then
-            npx tsx src/cli.ts watch --write
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            npx tsx src/cli.ts watch --json-out watcher-out/run.json
           else
-            npx tsx src/cli.ts watch
+            npx tsx src/cli.ts watch --write --json-out watcher-out/run.json
           fi
+
+      - name: Write the run summary
+        if: ${{ always() }}
+        run: |
+          {
+            echo "### Watcher run"
+            echo '```json'
+            cat watcher-out/run.json 2>/dev/null || echo "no run output"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload debug output
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: watcher-run
+          path: watcher-out/run.json
+          if-no-files-found: ignore
 
       - name: Open a pull request for human approval
         if: ${{ hashFiles('watcher-out/pull-request.md') != '' }}
@@ -52,3 +81,21 @@ jobs:
 
             Co-authored-by: CommandCodeBot <noreply@commandcode.ai>
           delete-branch: true
+
+      - name: Raise an issue when a month start is overdue
+        if: ${{ hashFiles('watcher-out/run.json') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          status=$(node -p "require('./watcher-out/run.json').status")
+          if [ "$status" != "overdue" ]; then exit 0; fi
+          key=$(node -p "const o=require('./watcher-out/run.json'); o.expected.year + '-' + String(o.expected.month).padStart(2,'0')")
+          latest=$(node -p "require('./watcher-out/run.json').latest")
+          title="Watcher: unconfirmed Hijri month start ($key)"
+          body=$(printf 'The watcher reached %s without confirming the start of %s.\n\nCheck the Ruet-e-Hilal announcement and add it to `data/hijri/overrides.json` manually, then merge.\n\n<sub>Automated by the watcher workflow.</sub>' "$latest" "$key")
+          existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$key in:title" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+          fi

@@ -77,9 +77,12 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for adding a city or a confirmed month,
 
 The Ruet-e-Hilal Committee meets on the evening of the 29th, so the watcher computes the two
 candidate dates, polls the news, and proposes an `overrides.json` entry only when **two independent
-publishers agree** on the same date. It opens a pull request rather than writing to `main`; merging
-it triggers regeneration and deploy. A wrong month start is the worst failure mode, so a human stays
-in the loop. It measures from the last confirmed start, so backfill one recent anchor first.
+publishers agree** on the same date. Because generic searches rank by relevance and miss minor
+months, it queries the month being watched across its common spellings and reads direct feeds too.
+It opens a pull request rather than writing to `main`; merging it triggers regeneration and deploy.
+A wrong month start is the worst failure mode, so a human stays in the loop, and an unconfirmed
+month raises an issue instead of failing silently. It measures from the last confirmed start, so
+backfill one recent anchor first.
 
 ## Accuracy and license
 

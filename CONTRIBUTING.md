@@ -38,6 +38,40 @@ Store **confirmed start dates, not offsets**. An offset applied to a calculated
 calendar cascades, because one wrong correction shifts every later month; start dates
 keep the error local.
 
+## How the watcher runs
+
+The watcher (`.github/workflows/watcher.yml`) polls the news on the 29th evening, requires
+two independent publishers to agree on a date, and opens a pull request — the update never
+reaches `main` without a human merging it.
+
+Two things to know when you touch it:
+
+- **Discovery is month-aware.** Generic "Ruet-e-Hilal" searches are ranked by relevance and
+  can be dominated by older announcements, so the watcher also queries the exact month across
+  spellings (see `MONTH_NAME_VARIANTS` in `src/hijri/months.ts`) and reads direct feeds. If a
+  month is regularly missed, add its romanisations there before widening the queries.
+- **GitHub `schedule` is not reliable.** It delays and drops runs under load; in practice the
+  `*/15` cron fires only a handful of times per day. Wire up an external dispatcher to cover
+  the 29th evening. Give it a fine-grained token with `actions: write` and have it POST:
+
+  ```bash
+  gh api -X POST repos/<owner>/<repo>/actions/workflows/watcher.yml/dispatches \
+    -f ref=main -F inputs[dry_run]=false
+  ```
+
+  Run it every ~15 minutes through the 13:00-20:00 UTC window; the script date-gates, so runs
+  outside the window exit immediately.
+
+To debug a run locally, simulate the clock and print what the watcher saw:
+
+```bash
+npx tsx src/cli.ts watch --now 2026-10-12T20:00:00+05:00 --dump
+```
+
+Every workflow run uploads `watcher-out/run.json` and writes it to the run summary, including
+date sightings and near misses. When the polling window closes without a confirmed start, the
+workflow opens (or updates) an issue so the failure is never silent.
+
 ## Adding a city
 
 Append a row to `data/cities.json`:
