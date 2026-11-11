@@ -39,9 +39,25 @@ jobs:
       - name: Regenerate calendar and prayer data
         run: npx tsx src/cli.ts generate
 
+      # Every run restamps `generated_at`, so most runs produce a diff that is
+      # nothing but timestamps. Proposing that as a pull request is noise, so only
+      # open one when the regenerated data actually differs. A new file (a
+      # rolled-over Hijri or Gregorian year) always counts as a real change.
+      - name: Check whether the regenerated data changed
+        id: diff
+        run: |
+          changed=false
+          if git status --porcelain -- data | grep -q '^??'; then
+            changed=true
+          elif git diff -U0 -- data | grep -E '^[+-][^+-]' | grep -qv 'generated_at'; then
+            changed=true
+          fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
       # `main` is protected, so the generator cannot push to it directly. Propose
       # the regenerated data as a pull request instead, like the watcher does.
       - name: Open a pull request with the regenerated data
+        if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -51,9 +67,8 @@ jobs:
             Automated regeneration, triggered by a change on `main` or the
             monthly heartbeat.
 
-            The diff is normally only `generated_at` timestamps. It carries real
-            changes when a new Hijri year rolls into range or a confirmed month
-            start is added.
+            It carries real changes when a new Hijri year rolls into range or a
+            confirmed month start is added; a timestamp-only run proposes nothing.
           commit-message: |
             chore: regenerate Hijri calendar and prayer data
 
@@ -61,3 +76,16 @@ jobs:
           add-paths: |
             data
           delete-branch: true
+
+      # Nothing to propose means any open regeneration pull request is stale (its
+      # diff was only `generated_at`), so close it rather than leave it queued.
+      - name: Close a stale regeneration pull request
+        if: steps.diff.outputs.changed != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          number=$(gh pr list --repo "$GITHUB_REPOSITORY" --head chore/regenerate-data --state open --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh pr close "$number" --repo "$GITHUB_REPOSITORY" --delete-branch \
+              --comment "The regenerated data has no change beyond \`generated_at\`, so this proposal is superseded."
+          fi
