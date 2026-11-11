@@ -41,4 +41,4 @@ Added to `data/hijri/overrides.json`:
 
 ---
 
-Merging this updates `data/hijri/overrides.json` and triggers regeneration and deployment.
+Merging this updates `data/hijri/overrides.json` and the regenerated calendar, and deploys the site.
