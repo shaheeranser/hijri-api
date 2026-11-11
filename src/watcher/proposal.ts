@@ -153,7 +153,7 @@ ${evidence}
 - [ ] The sources are the Central Ruet-e-Hilal Committee, not a zonal committee.
 - [ ] The month name is correct.
 
-Merging this updates \`data/hijri/overrides.json\` for \`${proposal.hijriKey}\` and triggers regeneration and deployment.
+Merging this updates \`data/hijri/overrides.json\` for \`${proposal.hijriKey}\` and the regenerated calendar included in this pull request, and deploys the site.
 
 <sub>Detected ${proposal.detectedAt}.</sub>
 `;
