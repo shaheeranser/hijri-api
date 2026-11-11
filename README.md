@@ -79,7 +79,8 @@ The Ruet-e-Hilal Committee meets on the evening of the 29th, so the watcher comp
 candidate dates, polls the news, and proposes an `overrides.json` entry only when **two independent
 publishers agree** on the same date. Because generic searches rank by relevance and miss minor
 months, it queries the month being watched across its common spellings and reads direct feeds too.
-It opens a pull request rather than writing to `main`; merging it triggers regeneration and deploy.
+It opens a pull request rather than writing to `main`, and rebuilds the calendar in the same pull
+request so the change is complete and reviewable in one step; merging it deploys the site.
 A wrong month start is the worst failure mode, so a human stays in the loop, and an unconfirmed
 month raises an issue instead of failing silently. It measures from the last confirmed start, so
 backfill one recent anchor first.
