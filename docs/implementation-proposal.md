@@ -154,7 +154,7 @@ The watcher does not need heavy NLP. There are only two outcomes, so it looks fo
 
 ### 6.3 Human confirmation via pull request
 
-The watcher opens a **PR** with the proposed `overrides.json` entry and the matched article links. Merging it (possible from a phone) triggers regeneration and a Pages deploy. This provides the approval step and an audit trail. Keyword matching can misfire on zonal committees, Peshawar's separate sighting, and "moon not yet sighted" headlines, and a wrong month start is the worst failure mode for this service.
+The watcher opens a **PR** with the proposed `overrides.json` entry, the regenerated calendar files and the matched article links. The PR carries the regenerated data because CI's data-freshness guard requires the committed calendar to match the confirmed record, so the proposal is self-consistent and merges in one step. Merging it (possible from a phone) triggers a Pages deploy. This provides the approval step and an audit trail. Keyword matching can misfire on zonal committees, Peshawar's separate sighting, and "moon not yet sighted" headlines, and a wrong month start is the worst failure mode for this service.
 
 ### 6.4 GitHub Actions specifics
 

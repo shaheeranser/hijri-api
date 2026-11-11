@@ -42,7 +42,8 @@ keep the error local.
 
 The watcher (`.github/workflows/watcher.yml`) polls the news on the 29th evening, requires
 two independent publishers to agree on a date, and opens a pull request — the update never
-reaches `main` without a human merging it.
+reaches `main` without a human merging it. It regenerates the calendar in the same pull
+request, so the proposal passes CI's data-freshness guard and merges in one review.
 
 Two things to know when you touch it:
 
