@@ -1,7 +1,7 @@
 {
   "hijri_year": 1448,
   "coverage_start": "2025-06-27",
-  "generated_at": "2026-11-01T05:53:17.872Z",
+  "generated_at": "2026-11-11T08:47:30.582Z",
   "baseline": "islamic-umalqura (Intl)",
   "days": {
     "2026-06-16": {
@@ -2233,13 +2233,28 @@
         "en": "Jumada al-Awwal",
         "ur": "جمادی الاول"
       },
-      "confidence": "unconfirmed",
+      "confidence": "confirmed",
       "sources": [
         "https://www.app.com.pk/national/jamadi-ul-awwal-moon-sighted-in-pakistan-first-day-to-fall-on-october-13/",
         "https://www.24newshd.tv/12-Oct-2026/jamadi-ul-awwal-moon-sighted-first-day-fall-tuesday"
       ]
     },
     "2026-11-12": {
+      "hijri": "1448-06-01",
+      "year": 1448,
+      "month": 6,
+      "day": 1,
+      "month_name": {
+        "en": "Jumada al-Thani",
+        "ur": "جمادی الثانی"
+      },
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
+    },
+    "2026-11-13": {
       "hijri": "1448-06-02",
       "year": 1448,
       "month": 6,
@@ -2248,9 +2263,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-13": {
+    "2026-11-14": {
       "hijri": "1448-06-03",
       "year": 1448,
       "month": 6,
@@ -2259,9 +2278,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-14": {
+    "2026-11-15": {
       "hijri": "1448-06-04",
       "year": 1448,
       "month": 6,
@@ -2270,9 +2293,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-15": {
+    "2026-11-16": {
       "hijri": "1448-06-05",
       "year": 1448,
       "month": 6,
@@ -2281,9 +2308,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-16": {
+    "2026-11-17": {
       "hijri": "1448-06-06",
       "year": 1448,
       "month": 6,
@@ -2292,9 +2323,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-17": {
+    "2026-11-18": {
       "hijri": "1448-06-07",
       "year": 1448,
       "month": 6,
@@ -2303,9 +2338,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-18": {
+    "2026-11-19": {
       "hijri": "1448-06-08",
       "year": 1448,
       "month": 6,
@@ -2314,9 +2353,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-19": {
+    "2026-11-20": {
       "hijri": "1448-06-09",
       "year": 1448,
       "month": 6,
@@ -2325,9 +2368,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-20": {
+    "2026-11-21": {
       "hijri": "1448-06-10",
       "year": 1448,
       "month": 6,
@@ -2336,9 +2383,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-21": {
+    "2026-11-22": {
       "hijri": "1448-06-11",
       "year": 1448,
       "month": 6,
@@ -2347,9 +2398,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-22": {
+    "2026-11-23": {
       "hijri": "1448-06-12",
       "year": 1448,
       "month": 6,
@@ -2358,9 +2413,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-23": {
+    "2026-11-24": {
       "hijri": "1448-06-13",
       "year": 1448,
       "month": 6,
@@ -2369,9 +2428,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-24": {
+    "2026-11-25": {
       "hijri": "1448-06-14",
       "year": 1448,
       "month": 6,
@@ -2380,9 +2443,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-25": {
+    "2026-11-26": {
       "hijri": "1448-06-15",
       "year": 1448,
       "month": 6,
@@ -2391,9 +2458,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-26": {
+    "2026-11-27": {
       "hijri": "1448-06-16",
       "year": 1448,
       "month": 6,
@@ -2402,9 +2473,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-27": {
+    "2026-11-28": {
       "hijri": "1448-06-17",
       "year": 1448,
       "month": 6,
@@ -2413,9 +2488,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-28": {
+    "2026-11-29": {
       "hijri": "1448-06-18",
       "year": 1448,
       "month": 6,
@@ -2424,9 +2503,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-29": {
+    "2026-11-30": {
       "hijri": "1448-06-19",
       "year": 1448,
       "month": 6,
@@ -2435,9 +2518,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-11-30": {
+    "2026-12-01": {
       "hijri": "1448-06-20",
       "year": 1448,
       "month": 6,
@@ -2446,9 +2533,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-01": {
+    "2026-12-02": {
       "hijri": "1448-06-21",
       "year": 1448,
       "month": 6,
@@ -2457,9 +2548,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-02": {
+    "2026-12-03": {
       "hijri": "1448-06-22",
       "year": 1448,
       "month": 6,
@@ -2468,9 +2563,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-03": {
+    "2026-12-04": {
       "hijri": "1448-06-23",
       "year": 1448,
       "month": 6,
@@ -2479,9 +2578,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-04": {
+    "2026-12-05": {
       "hijri": "1448-06-24",
       "year": 1448,
       "month": 6,
@@ -2490,9 +2593,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-05": {
+    "2026-12-06": {
       "hijri": "1448-06-25",
       "year": 1448,
       "month": 6,
@@ -2501,9 +2608,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-06": {
+    "2026-12-07": {
       "hijri": "1448-06-26",
       "year": 1448,
       "month": 6,
@@ -2512,9 +2623,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-07": {
+    "2026-12-08": {
       "hijri": "1448-06-27",
       "year": 1448,
       "month": 6,
@@ -2523,9 +2638,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-08": {
+    "2026-12-09": {
       "hijri": "1448-06-28",
       "year": 1448,
       "month": 6,
@@ -2534,9 +2653,13 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
-    "2026-12-09": {
+    "2026-12-10": {
       "hijri": "1448-06-29",
       "year": 1448,
       "month": 6,
@@ -2545,29 +2668,26 @@
         "en": "Jumada al-Thani",
         "ur": "جمادی الثانی"
       },
-      "confidence": "unconfirmed"
-    },
-    "2026-12-10": {
-      "hijri": "1448-07-01",
-      "year": 1448,
-      "month": 7,
-      "day": 1,
-      "month_name": {
-        "en": "Rajab",
-        "ur": "رجب"
-      },
-      "confidence": "predicted"
+      "confidence": "confirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
     "2026-12-11": {
-      "hijri": "1448-07-02",
+      "hijri": "1448-06-30",
       "year": 1448,
-      "month": 7,
-      "day": 2,
+      "month": 6,
+      "day": 30,
       "month_name": {
-        "en": "Rajab",
-        "ur": "رجب"
+        "en": "Jumada al-Thani",
+        "ur": "جمادی الثانی"
       },
-      "confidence": "predicted"
+      "confidence": "unconfirmed",
+      "sources": [
+        "https://www.brecorder.com/news/40448338/first-jamadi-ul-sani-tomorrow",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmZCdnBVVXJPMmduVEt0STdxSldIcGotVVZNLWpSNjBFOUVaNGxOQlRJYlNKTnlMc2tyX0EyX09wVFVNWk4talVqcEZkdVNqQ1ZVclJUbGVCMlV1YmlZa0hWMjR2YS1PMXNDM2k4bGNVYld4NGdYYlljUEM3eHV5eDdydzhwdGxHUm9WU1JfUHRaMVVGamhLRVFrREpCaW56Y1dQSXlvdEZlUEN0V2kwdkh6cTlfMDhvSWc?oc=5"
+      ]
     },
     "2026-12-12": {
       "hijri": "1448-07-03",
