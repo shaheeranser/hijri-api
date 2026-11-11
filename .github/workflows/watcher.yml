@@ -67,6 +67,14 @@ jobs:
           path: watcher-out/run.json
           if-no-files-found: ignore
 
+      # A pull request that only changes overrides.json fails CI's
+      # data-freshness guard, which requires the committed calendar to match the
+      # confirmed record. Rebuild the calendar here so the proposal is
+      # self-consistent and reviewable in one merge.
+      - name: Rebuild the calendar from the updated overrides
+        if: ${{ hashFiles('watcher-out/pull-request.md') != '' }}
+        run: npx tsx src/cli.ts generate --calendar
+
       - name: Open a pull request for human approval
         if: ${{ hashFiles('watcher-out/pull-request.md') != '' }}
         uses: peter-evans/create-pull-request@v6
@@ -75,7 +83,10 @@ jobs:
           branch: watcher/hijri-month-start
           title: "Watcher: confirm the next Hijri month start"
           body-path: watcher-out/pull-request.md
-          add-paths: data/hijri/overrides.json
+          add-paths: |
+            data/hijri/overrides.json
+            data/hijri/calendar
+            data/hijri/index.json
           commit-message: |
             data: propose confirmed Hijri month start
 
